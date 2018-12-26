@@ -26,6 +26,12 @@ Antes de empezar hay que aclarar el scope de las varibles `var` y `let` , estos 
     }
     //aqui no dara error por que esta variable si existe
     console.log(item)
+
+    //igual
+    for (numero=0;numero<10;numero++){
+        console.log(numero+" tipo "+typeof(numero))
+    }
+    console.log(numero)
 ```
 
 
