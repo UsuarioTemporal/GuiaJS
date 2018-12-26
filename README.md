@@ -13,7 +13,17 @@ Antes de empezar hay que aclarar el scope de las varibles `var` y `let` , estos 
     let number = 3
     var num= 3
     numero = 3
+    // lo mejor
+    for(let item=0;item<5;item++){
+        console.log(item)
+    }
+    console.log(item)
 
+    //lo peor , dejemos de usar var
+    for(var item=0;item<5;item++){
+        console.log(item)
+    }
+    console.log(item)
 ```
 
 
