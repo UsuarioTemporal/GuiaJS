@@ -17,12 +17,14 @@ Antes de empezar hay que aclarar el scope de las varibles `var` y `let` , estos 
     for(let item=0;item<5;item++){
         console.log(item)
     }
+    //aqui dara error por que esta variable no existe 
     console.log(item)
 
     //lo peor , dejemos de usar var
     for(var item=0;item<5;item++){
         console.log(item)
     }
+    //aqui no dara error por que esta variable si existe
     console.log(item)
 ```
 
