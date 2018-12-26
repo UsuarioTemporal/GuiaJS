@@ -7,11 +7,11 @@ console.log(typeof(cadena))
 let conteo = 1
 while( true) {
     console.log(conteo)
-    conteo++;
+    conteo++
     if(conteo==5) break;
 }
 console.log("\n")
-conteo=1;
+conteo=1
 do {
     console.log(conteo)
     conteo++
