@@ -10,5 +10,8 @@ const pi = 3.14
 {
     let prisionero = true
 }
+{
+    let prisionero = false
+}
 //no existe
-console.log(prisionero) 
+console.log(prisionero)

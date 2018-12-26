@@ -7,6 +7,25 @@ La industria encargada de la estandarización de js y otras tecnologias.
 
 
 ## Tipos de datos
+Javascript es un lenguaje dinamicamente tipado o debilmente tipado , esto quiere decir que no se colocara el tipo de dato cuando se quiere definir una variable (Al igual que python :3)
+
+
+Javascript esta basado en prototipos ,esto biene incluido en las variables ,metodos , funciones, clases,objetos, etc .
+
+```javascript
+    let texto = 'Que pex'
+    console.log(texto.length)
+```
+> **resultado** =  7
+```javascript
+    //primitivos
+
+
+
+
+    //compuesto y objetos
+```
+
 Antes de empezar hay que aclarar el scope de las varibles `var` y `let` , estos sirven para la declaracion de variables aunque si JS tambien deja declarar variables sin estas palabras reservadas
 
 ```javascript
