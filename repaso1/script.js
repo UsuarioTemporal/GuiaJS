@@ -12,19 +12,19 @@ while( true) {
 }
 conteo=1;
 do {
-    console.log(console)
+    console.log(conteo)
     conteo++;
     if(conteo==5) break;
 }while(true)
 
 
 // Condicionales
-if(conteo>5){
-
-}else{
-
-}else if(){
-
+if(conteo<5){
+    console.log("Soy menor que cinco")
+}else if(conteo===5){
+    console.log("Soy cinco")
+}else {
+    console.log("Soy mayor que cinco")
 }
 // Funcion normal
 function funcionNormal(number1,number2){
