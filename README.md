@@ -19,11 +19,20 @@ Javascript esta basado en prototipos ,esto biene incluido en las variables ,meto
 > **resultado** =  7
 ```javascript
     //primitivos
-
+    string (texto)
+    number (numeros)
+    boolean ()
+    undefined 
+    null
 
 
 
     //compuesto y objetos
+    arrays
+    objetos
+    maps
+    sets
+    funciones
 ```
 
 Antes de empezar hay que aclarar el scope de las varibles `var` y `let` , estos sirven para la declaracion de variables aunque si JS tambien deja declarar variables sin estas palabras reservadas
