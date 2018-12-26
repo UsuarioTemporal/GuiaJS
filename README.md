@@ -1,7 +1,8 @@
 # RepasoJS
 Curso de JS para que chavex repase 
-## ECMA INTERNATIONAL
-La industria encargada de la estandarización de js y otras tecnologias
+## ECMA INTERNATIONAL (European Computer Munufectures Association)
+La industria encargada de la estandarización de js y otras tecnologias.
+
 [Mas referencias](https://es.wikipedia.org/wiki/Ecma_International)
 
 
