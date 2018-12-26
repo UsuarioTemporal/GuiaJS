@@ -13,7 +13,7 @@ while( true) {
 conteo=1;
 do {
     console.log(conteo)
-    conteo++;
+    conteo++
     if(conteo==5) break;
 }while(true)
 
