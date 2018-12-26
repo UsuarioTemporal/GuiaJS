@@ -10,14 +10,18 @@ while( true) {
     conteo++;
     if(conteo==5) break;
 }
+console.log("\n")
 conteo=1;
 do {
     console.log(conteo)
     conteo++
     if(conteo==5) break;
 }while(true)
-
-
+console.log("\n")
+for(let item=0;item<5;item++){
+    console.log(item)
+}
+console.log("\n")
 // Condicionales
 if(conteo<5){
     console.log("Soy menor que cinco")
