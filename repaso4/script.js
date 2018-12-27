@@ -4,5 +4,8 @@ for(let item of arr){
     if(typeof item !='number') continue
     suma+=item
 }
+console.log(arr instanceof Array)
 
+// Creacion de prototipos a todos los objetos que hereden de la clase Array
+Array.prototype.metodo = 'Soy un metodo'
 console.log(suma)
