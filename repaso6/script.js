@@ -25,3 +25,17 @@ console.log(myObject.hasOwnProperty('otro'))
 
 // copiando un objeto
 let myObject2 = Object.assign({},myObject)
+
+// Asignar variables existentes a propiedades
+let firtsName = 'Thom'
+let latsName = 'Maurick'
+let myObject3={
+    firtsName,
+    latsName
+}
+
+// Expresiones en propiedades
+
+let object4 = {
+    [firtsName+latsName] : 'nombreCompleto'
+}
