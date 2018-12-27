@@ -26,3 +26,7 @@ let arrayOtroTrapo = nuevoSaludo.split("")
 // Nuevos métodos
 
 // .startsWith() , .endsWith() , includes()
+
+// let edad=prompt("Dime tu edad")
+
+

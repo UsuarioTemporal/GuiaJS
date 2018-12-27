@@ -67,6 +67,6 @@ Antes de empezar hay que aclarar el scope de las varibles `var` y `let` , estos 
     }
     console.log(numero)
 ```
-
+## Truthy and falsy values
 
 ## TYPE COERTION
