@@ -18,3 +18,13 @@ Array.prototype.metodo = 'Soy un metodo desde un prototipo'
 console.log(suma)
 console.log(arr.metodo)
 console.log(arr)
+let texto1 = arr.join()
+let texto2 = arr.join('')
+let texto3 = arr.join('-')
+console.log(texto1+" || "+texto2+" || "+texto3)
+
+let arr2 = arr.slice()
+arr2.splice(2,2,'Thom') //comienza desde la posicion 2 elimina dos y añade Thom
+console.log(arr2)
+arr2.splice(2,0,'Roman','Aguilar') //comienza desde la posicion 2 elimina 0 elementos y se añade Roman Aguilar
+console.log(arr2)
