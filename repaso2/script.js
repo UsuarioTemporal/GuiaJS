@@ -23,4 +23,4 @@ let variable = "texto \"otro texto\""
 let templateString = `otra variable ${variable}` 
 console.log(templateString)
 
-console.log(templateString.indexOf('o')==0)
+console.log(templateString.toUpperCase().indexOf('O')==0)
