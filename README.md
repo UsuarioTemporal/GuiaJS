@@ -10,7 +10,10 @@ La industria encargada de la estandarización de js y otras tecnologias.
 Javascript es un lenguaje dinamicamente tipado o debilmente tipado , esto quiere decir que no se colocara el tipo de dato cuando se quiere definir una variable (Al igual que python :3)
 
 
-Javascript esta basado en prototipos ,esto biene incluido en las variables ,metodos , funciones, clases,objetos, etc .
+Javascript esta basado en prototipos ,esto biene incluido en las variables ,metodos , funciones,objetos, etc .
+
+### Prototipos
+Esto se puede encontrar mayor mente en los objetos, esto quiere decir que todos los objetos dependen de un prototipo y que estos tambien son objetos
 
 ```javascript
     let texto = 'Que pex'
@@ -22,8 +25,8 @@ Javascript esta basado en prototipos ,esto biene incluido en las variables ,meto
     string (texto)
     number (numeros)
     boolean ()
-    undefined 
-    null
+    undefined  //cuando no se le asigna ningun valor ala variable
+    null //cuando el elemento no existe pero si se crea la variable
 
 
 
