@@ -21,4 +21,17 @@ let index = array.findIndex(item=>item>3)
 
 let iteratorIndex = array.keys()
 let iteratorValues = array.values()
-let iterator = array.entries()
+let iterator = array.entries() // devulve una dubla de array
+for (let item of iteratorIndex){
+    console.log(item)
+}
+console.log("\n")
+for (let item of iteratorValues){
+    console.log(item)
+}
+console.log("\n")
+for (let item of iterator){
+    console.log(item)
+}
+
+// El objetivo es el procesamiento , pues este ejecuta los datos en tiempo de ejecucion y no retorna todo en uno solo
