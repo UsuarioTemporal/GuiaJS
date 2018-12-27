@@ -15,3 +15,9 @@ const pi = 3.14
 }
 //no existe
 console.log(prisionero)
+
+let variable = "texto \"otro texto\""
+
+// template string = esto se usara cuando contendra elementos del html o elementos extensos
+
+let templateString = `otra variable ${variable}` 
