@@ -16,7 +16,7 @@ Javascript esta basado en prototipos ,esto biene incluido en las variables ,meto
 Esto se puede encontrar mayormente en los objetos, esto quiere decir que todos los objetos dependen de un prototipo y que estos tambien son objetos .
 En conclusion un prototipo es un objeto del que otros objetos heredan propiedades
 - Objetos creados por `new Object()` heredan directamente dl objeto `Object.prototype`
-- Objetos creados por `new Date()` heredan de Date.prototype
+- Objetos creados por `new Date()` heredan de `Date.prototype`
 
 ```javascript
     let texto = 'Que pex' 
