@@ -22,3 +22,6 @@ console.log('comprometido' in myObject)
 Object.prototype.otro='otro';
 console.log('otro' in myObject)
 console.log(myObject.hasOwnProperty('otro'))
+
+// copiando un objeto
+let myObject2 = Object.assign({},myObject)
