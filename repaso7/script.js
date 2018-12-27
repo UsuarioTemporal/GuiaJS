@@ -27,11 +27,15 @@ console.log(estudiantes[2])
 
 console.log(estudiantes)
 let nuevoArr=estudiantes.filter((object)=>{
-    if(object.calificacion>9){
+    if(object.calificacion>10){
         return object.nombre
     }
 })
-
+nuevoArr=nuevoArr.map((object)=>{
+    object.nombre=object.nombre.toUpperCase()
+    return object
+})
+// let atributosDEEstusiantes= Object.values(estudiantes)
 
 console.log(estudiantes)
 
@@ -39,3 +43,10 @@ console.log(estudiantes)
 nuevoArr.forEach((item)=>{
     console.log(item.nombre)
 })
+
+
+
+let soloNombresAprobados = nuevoArr.map((object)=>{
+    return object.nombre
+})
+
