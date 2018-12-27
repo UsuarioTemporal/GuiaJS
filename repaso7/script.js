@@ -25,6 +25,17 @@ console.log(estudiantes.length)
 console.log(estudiantes[2])
 
 
-estudiantes.map(()=>{
-    
+console.log(estudiantes)
+let nuevoArr=estudiantes.filter((object)=>{
+    if(object.calificacion>9){
+        return object.nombre
+    }
+})
+
+
+console.log(estudiantes)
+
+
+nuevoArr.forEach((item)=>{
+    console.log(item.nombre)
 })
