@@ -8,5 +8,17 @@ let index = array.findIndex(item=>item>3)
 
 
 
-//iteradores : son objetos al igual que python tiene el .next
+//Iteradores : son objetos al igual que python tiene el .next
 // y la ventaja al igual que python guarda su estado
+//este objeto devuelve dos propiedades value, done(devuelve true cuando no tiene mas elementos)
+
+
+// .keys()
+
+// .values()
+
+//.entries()
+
+let iteratorIndex = array.keys()
+let iteratorValues = array.values()
+let iterator = array.entries()
