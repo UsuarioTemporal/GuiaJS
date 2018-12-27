@@ -21,6 +21,15 @@ console.log("\n")
 for(let item=0;item<5;item++){
     console.log(item)
 }
+
+let lista = ['sdasd','asdasd']
+for (let value of lista){
+    console.log(value)
+}
+
+
+
+
 console.log("\n")
 // Condicionales
 if(conteo<5){

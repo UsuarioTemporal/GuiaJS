@@ -69,4 +69,8 @@ Antes de empezar hay que aclarar el scope de las varibles `var` y `let` , estos 
 ```
 ## Truthy and falsy values
 
+Truthy : String no vacios ,[],{},numeros diferentes de cero
+Falsy : 0,String vacio,undefined,null,NaN
+
+
 ## TYPE COERTION
