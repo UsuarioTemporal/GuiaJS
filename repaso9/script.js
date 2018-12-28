@@ -38,3 +38,22 @@ let Pais = function(nombre,moneda){
     this.moneda=moneda
 }
 let peru = new Pais('Peru','Sol');
+
+
+let arr = [1,true,'sdfsdf',undefined,null,1,1]
+let suma = 0
+for (let item of arr){
+    if (typeof item!='number') continue
+    suma+=item
+}
+let sum = arr.reduce((prev,curr)=>{
+    if (typeof curr !='number' && typeof prev !='number'){
+        return 0
+    }else if(typeof curr !='number'){
+        return prev
+    }else if(typeof prev !='number'){
+        return curr
+    }else{
+        return curr+prev
+    }
+})
