@@ -5,7 +5,7 @@ let myObject = {
     skills: ['java','python','javascript','css','html','go','c','c++','sql'],
     programar(){
         let cadena =``;
-        for(let skill of myObject.skills){
+        for(let skill of this.skills){
             cadena+=`Yo programo en ${skill}\n`;
         }
         return cadena
@@ -17,7 +17,7 @@ console.log(myObject.name)
 console.log(myObject.skills)
 console.log(myObject.skills[1])
 console.log(myObject.cuidad)
-console.log(myObject.programar)
+console.log(myObject.programar())
 console.log('comprometido' in myObject)
 Object.prototype.otro='otro';
 console.log('otro' in myObject)
