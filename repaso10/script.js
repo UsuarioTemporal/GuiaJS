@@ -58,5 +58,6 @@ console.log(superFuncion(...array))
 const func = (...arr)=>{
     return arr.reduce((pre,curr)=>pre+curr)
 }
+
 console.log(func(...array))
 console.log(func(1,2,5,6))
