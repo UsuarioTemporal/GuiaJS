@@ -1,0 +1,10 @@
+{
+    "personas" : [
+        {
+            "nombre" : "Luis",
+            "apellido":"Gomez",
+            "edad" :20,
+            "salario":200
+        }
+    ]
+}
