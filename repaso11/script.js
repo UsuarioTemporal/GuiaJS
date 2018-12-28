@@ -1,3 +1,4 @@
+
 class Persona {
     constructor(nombre,apellido,pais){
         this.nombre=nombre
@@ -18,8 +19,13 @@ class Alumno extends Persona{
     saludar(){
         return super.saludar()+` con la nota ${this.nota}`
     }
+    static soyEstatico(){
+        return  `soy estatico y no dependo de un objeto`
+    }
 }
 let thom =new Persona('Thom','Roman','Peru')
-let juan = new Alumno('Carlos','Ramirez','Peru');
+let juan = new Alumno('Carlos','Ramirez','Peru',20);
+let mensajeNacional = Alumno.soyEstatico()
 console.log(thom.saludar())
 console.log(juan.saludar())
+console.log(mensajeNacional)
