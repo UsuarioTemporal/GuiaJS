@@ -28,3 +28,9 @@ document.getElementById('info').innerHTML=cliente
  * 
  * 
  */
+let cadenaJSON = '{"nombre" : "luis","apellido":"Gomez"}'
+
+let personasJSON = JSON.parse(cadenaJSON)
+console.log(personasJSON)
+document.write("<br>"+typeof personasJSON)
+let stringJSON = JSON.stringify(personasJSON)
