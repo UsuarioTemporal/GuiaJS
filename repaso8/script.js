@@ -21,12 +21,12 @@ promedio=promedio/estudiantes.length
 
 
 let promedio2 = estudiantes.reduce((pre,curr,ind,arr)=>{
-    // curr.calificacion +=pre.calificacion
-    // if(ind===arr.length-1){
-    //     return curr.calificacion/arr.length
-    // }
+    curr.calificacion +=pre.calificacion
+    if(ind===arr.length-1){
+        return curr.calificacion/arr.length
+    }
     return {
-        calificacion : curr.calificacion+pre.calificacion
+        calificacion : curr.calificacion
     }
 })
 
