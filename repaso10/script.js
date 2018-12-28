@@ -50,5 +50,12 @@ let superFuncion = function(){
     return [...arguments].reduce((pre,curr)=>pre+curr)
 }
 
-let array=[0,1,2,3]
+let array=[0,1,2,3,12]
 console.log(superFuncion(...array))
+
+
+// Parametros por rest -> igual que python  
+const func = (...arr)=>{
+    return arr.reduce((pre,curr)=>pre+curr)
+}
+console.log(func(...array))
