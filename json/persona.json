@@ -5,6 +5,12 @@
             "apellido":"Gomez",
             "edad" :20,
             "salario":200
+        },
+        {
+            "nombre" : "Thom",
+            "apellido":"Toman",
+            "edad" :20,
+            "salario":200
         }
     ]
 }
