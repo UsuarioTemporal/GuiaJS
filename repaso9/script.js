@@ -23,3 +23,10 @@ const wrapper = (a,b,opcion=true)=>{
 console.log(wrapper(1,5)())
 console.log(wrapper(1,5,true)())
 console.log(wrapper(1,5,false)())
+
+// Funciones autoinvocadas
+
+let g = ((d,w,n)=>{
+    // alert("Que pex")
+    console.log(d,w,n,n.userAgent)
+})(document,window,navigator)
