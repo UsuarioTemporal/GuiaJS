@@ -30,3 +30,11 @@ let g = ((d,w,n)=>{
     // alert("Que pex")
     console.log(d,w,n,n.userAgent)
 })(document,window,navigator)
+
+
+// Funcion constructora 
+let Pais = function(nombre,moneda){
+    this.nombre=nombre
+    this.moneda=moneda
+}
+let peru = new Pais('Peru','Sol');
