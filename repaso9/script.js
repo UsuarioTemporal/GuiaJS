@@ -57,3 +57,12 @@ let sum = arr.reduce((prev,curr)=>{
         return curr+prev
     }
 })
+
+
+// apply() and call()
+let list = [1,5]
+const sumas=(number1,number2)=>{
+    return number1+number2
+}
+
+let numeros = sumas.apply(undefined,list)
