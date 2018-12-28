@@ -28,7 +28,7 @@ console.log(estudiantes[2])
 console.log(estudiantes)
 let nuevoArr=estudiantes.filter((object)=>{
     if(object.calificacion>10){
-        return object.nombre
+        return object
     }
 })
 nuevoArr=nuevoArr.map((object)=>{
