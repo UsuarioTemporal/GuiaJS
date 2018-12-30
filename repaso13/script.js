@@ -26,11 +26,15 @@ const mes = (numberMonth)=>{
 
     return months[numberMonth]
 }
-
+let hourLeadingZero= num=>{
+    return ('0'+num).slice(-2)
+} 
 const hora = (hora)=>{
     let h =  hora.getHours()>=12 ? hora.getHours()-12 : hora.getHours()
+    let s = hora.getSeconds()
+    let m = hora.getMinutes()
     let amPm = hora.getHours()>=12 ? 'pm' : 'am'
-    return `${h} ${amPm}`
+    return `${hourLeadingZero(h)} : ${hourLeadingZero(m)}: ${hourLeadingZero(s)} ${amPm}`
 }
 
 let dateFormate = ` ${day(fecha.getDay())} ${fecha.getDate()} de ${mes(fecha.getMonth())} del ${fecha.getFullYear()} , ${hora(fecha)}`
