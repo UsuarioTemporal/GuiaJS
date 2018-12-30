@@ -27,5 +27,12 @@ const mes = (numberMonth)=>{
     return months[numberMonth]
 }
 
-let dateFormate = ` ${day(fecha.getDay())} ${fecha.getDate()} de ${mes(fecha.getMonth())} del ${fecha.getFullYear()} , 05:31 pm`
+const hora = (hora)=>{
+    let h =  hora.getHours()>=12 ? hora.getHours()-12 : hora.getHours()
+    let amPm = hora.getHours()>=12 ? 'pm' : 'am'
+    return `${h} ${amPm}`
+}
+
+let dateFormate = ` ${day(fecha.getDay())} ${fecha.getDate()} de ${mes(fecha.getMonth())} del ${fecha.getFullYear()} , ${hora(fecha)}`
+
 document.write(dateFormate) 
