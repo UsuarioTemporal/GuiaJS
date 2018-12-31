@@ -19,16 +19,31 @@ let myInterval = setInterval(()=>{
 // },1000)
 
 // Ejercicio de cueta regresiva
-let countDown = ms=>{
-    let myCountDown = setInterval(()=>{
-        let minutes = Math.floor(ms / (1000*60)),
-            seconds = Math.floor(ms %(1000*60))
-        document.body.innerHTML=`Queda ${minutes} minutes y ${seconds} segundos`
-        if(ms===0){
-            clearInterval(myCountDown)
-        }
-        ms-=1000
-    },1000)
-}
+const getRemainingTime = deadline => {
+    let now = new Date(),
+        remainTime = (new Date(deadline) - now + 1000) / 1000,
+        remainSeconds = ('0' + Math.floor(remainTime % 60)).slice(-2),
+        remainMinutes = ('0' + Math.floor(remainTime / 60 % 60)).slice(-2),
+        remainHours = ('0' + Math.floor(remainTime / 3600 % 24)).slice(-2),
+        remainDays = Math.floor(remainTime / (3600 * 24));
+    return {
+        remainSeconds,
+        remainMinutes,
+        remainHours,
+        remainDays,
+        remainTime
+    }
+};
+const countdown = (deadline,elem,finalMessage) => {
+    const el = document.getElementById(elem);
 
-countDown(6000)
+    const timerUpdate = setInterval( () => {
+        let t = getRemainingTime(deadline);
+        el.innerHTML = `${t.remainDays}d:${t.remainHours}h:${t.remainMinutes}m:${t.remainSeconds}s`;
+        if(t.remainTime <= 1) {
+            clearInterval(timerUpdate);
+            el.innerHTML = finalMessage;
+        }
+    }, 1000)
+};
+countdown('Dec 31 2025 21:34:40 GMT-0500', 'container', '¡Ya empezó!');
