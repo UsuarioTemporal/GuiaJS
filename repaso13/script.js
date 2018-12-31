@@ -49,3 +49,10 @@ console.log(new Date(1998,3,17))
 console.log(new Date("Fri Apr 17 1998 00:00:00 GMT-0500"))
 
 // Operaciones con fechas
+let d = new Date()
+let d2 = new Date(1998,3,17)
+console.log(d-d2)
+console.log(d*d2)
+console.log(d-d2)
+console.log(d/d2)
+console.log(d%d2)
