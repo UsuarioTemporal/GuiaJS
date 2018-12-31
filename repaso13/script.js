@@ -40,3 +40,12 @@ const hora = (hora)=>{
 let dateFormate = ` ${day(fecha.getDay())} ${fecha.getDate()} de ${mes(fecha.getMonth())} del ${fecha.getFullYear()} , ${hora(fecha)}`
 
 document.write(dateFormate) 
+
+
+// Definir fechas
+console.log(new Date(1998,3,17))
+
+// FORMATOS : 
+console.log(new Date("Fri Apr 17 1998 00:00:00 GMT-0500"))
+
+// Operaciones con fechas
