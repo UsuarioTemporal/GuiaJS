@@ -58,5 +58,41 @@ console.log(d/d2)
 console.log(d%d2)
 
 const miliToDateObject = (ms)=>{
+    let seconds = Math.floor(ms / 1000)
+    let minutes = Math.floor(ms / (1000*60))
+    let hour = Math.floor(ms / (1000*60*60))
+    let day = Math.floor(ms / (1000*60*60*24))
+    let year = Math.floor(ms / (1000*60*60*24*365))
+    return {
+        year,
+        day,
+        hour,
+        minutes,
+        seconds
+    }
+}
+
+const convertidor = (ms)=>{
+    let obj = Object.assign({},miliToDateObject(ms))
+    let years = obj.year,
+        days = obj.day % 365 ,
+        hours = obj.hour % 24 ,
+        seconds = obj.seconds % 60 ,
+        minutes = obj.minutes % 60 ;
+        return {
+            years,
+            days,
+            hours,
+            minutes,
+            seconds
+        }
+
+
+
     
 }
+let f = miliToDateObject(d-d2)
+console.log(f)
+console.log(convertidor(d-d2))
+console.log(Object.keys(f))
+console.log(Object.values(f))
