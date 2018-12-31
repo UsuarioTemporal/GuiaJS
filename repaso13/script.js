@@ -56,3 +56,7 @@ console.log(d*d2)
 console.log(d-d2)
 console.log(d/d2)
 console.log(d%d2)
+
+const miliToDateObject = (ms)=>{
+    
+}
