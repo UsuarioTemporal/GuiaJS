@@ -47,3 +47,4 @@ const countdown = (deadline,elem,finalMessage) => {
     }, 1000)
 };
 countdown('Dec 31 2025 21:34:40 GMT-0500', 'container', '¡Ya empezó!');
+
