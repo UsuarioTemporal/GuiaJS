@@ -96,3 +96,9 @@ console.log(f)
 console.log(convertidor(d-d2))
 console.log(Object.keys(f))
 console.log(Object.values(f))
+
+// Horarios y fechas internacionales
+
+// getUTC 
+
+console.log()
