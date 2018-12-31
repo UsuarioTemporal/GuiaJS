@@ -97,8 +97,12 @@ console.log(convertidor(d-d2))
 console.log(Object.keys(f))
 console.log(Object.values(f))
 
-// Horarios y fechas internacionales
+// Horarios y fechas internacionales (meridiano de greenwich)
 
-// getUTC 
+// getUTC... UTC significa horario internacional
+// getTimez oneOffset() diferencia en minutos de la hora cera a nuestra hora horaria
 
-console.log()
+let newDate = new Date()
+console.log("Hora local ",newDate.getHours())
+console.log("Hola internacional ",newDate.getUTCHours())
+console.log(newDate.getTimezoneOffset())
