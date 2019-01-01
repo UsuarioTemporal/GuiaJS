@@ -39,10 +39,20 @@ console.dir(menuItems)
 
 // El DOM se divide atravez de nodos , todo es un nodo 
 /**
- * element.nextElementSibling -> hermano siguiente
- * element.previousElementSibling ->hermano anterior
- * element.parentElement ->padre
- * element.children ->lista de hijos
- * element.firtElementChild 
  * 
+ * Hermanos
+ *      element.nextElementSibling -> hermano siguiente (elemento)
+ *      element.nextSibling -> hhermano siguiente (nodo)
+ *      element.previousElementSibling -> hermano anterior (elemento)
+ *      element.previousSibling -> hermano anterior (nodo)
+ * 
+ * Padres
+ *      element.parentElement -> padre (elemento)
+ *      element.parentNode ->padre (Nodo)
+ * 
+ * Hijos
+ *      element.children -> lista de elementos hijos
+ *      element.firstElementChild ->primer hijo
+ *      element.lastElementChild ->ultimo hijo
+ *      element.childNodes ->todos los nodos hijos
  */
