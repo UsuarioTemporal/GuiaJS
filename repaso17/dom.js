@@ -99,3 +99,17 @@ menu.appendChild(el)
 let elem = document.createElement('li')
 el.textContent="Primer elemento"
 menu.insertBefore(el,menuItems[1])
+
+
+
+/**
+ * 
+ * Eliminar y mover elementos del DOM
+ *    parent.removeChild(element)
+ *    element.remove()
+ *    
+ * 
+ */
+
+let eleDele = menu.removeChild(menuItems[0])
+menu.appendChild(eleDele)
