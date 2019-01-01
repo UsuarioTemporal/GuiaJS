@@ -35,4 +35,14 @@
  * .open("url")
  * .close()
  * window.getSelection().toString()
+ * window.getComputedStyle($0)
+ * .scrollTo(x,y) nos redirecciona a la posicion x,y
+ * .scrollBy(x,y) suma los las coordenas x,y a las ya existentes
+ */
+
+//  Objeto history , guarda el historial de la pesaña abierta y de la sesion actual
+
+/**
+ * 
+ * Métodos para moverse en el historial
  */
