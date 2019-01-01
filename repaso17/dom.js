@@ -56,3 +56,38 @@ console.dir(menuItems)
  *      element.lastElementChild ->ultimo hijo
  *      element.childNodes ->todos los nodos hijos
  */
+// [...document.links].map((element)=>{
+//   element.style.color = "red"
+// })
+
+/**
+ * Propiedades de los elementos del DOM
+ *  Contenido 
+ *      .textContent -> me devuelve el texto plano del documento (lectura y escritura)
+ *      .innerHTML -> retora el HTML del elemento  , es decir con la etiqueta y todo
+ * 
+ *  Atributos
+ *      .attributes
+ *      .getAttribute('attr')
+ *      .getAttribute('attr','value')
+ *      .removeAttribute('attr')
+ * 
+ * Clases
+ *    .classList
+ *        .add('className')
+ *        .remove('classNome')
+ *        .toggle('className')
+ *        .contains('ClassName') ->devuelve true si el elemneto contiene esa clase : muy usada para la delegacion de eventos
+ */
+
+
+/**
+ * 
+ * TRANSFORMAR EL DOM 
+ *      CREAR ELEMENTOS
+ *          document.createElement('tagName')
+ *          
+ *      INSERTAR ELEMENTOS
+ *          
+ * 
+ */
