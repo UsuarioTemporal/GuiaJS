@@ -8,8 +8,11 @@
  */
 let coords = navigator.geolocation.getCurrentPosition((position)=>{
     console.log(position)
-    let coords = position.coords;
-    let lat = coords.latitude
-    let long = coords.longitude
-    console.log(long,lat)
+    let coord = position.coords
+    let lat = coord.latitude
+    let long = coord.longitude
+    console.log(lat,long)
 })
+
+
+// Objeto Location .- contiene la informacion de la p agina actual
