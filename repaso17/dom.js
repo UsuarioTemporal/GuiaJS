@@ -88,6 +88,14 @@ console.dir(menuItems)
  *          document.createElement('tagName')
  *          
  *      INSERTAR ELEMENTOS
+ *          parent.appendChild(childElement)
  *          
  * 
  */
+let el = document.createElement('li')
+el.textContent='Soy un nuevo elemento'
+menu.appendChild(el)
+
+let elem = document.createElement('li')
+el.textContent="Primer elemento"
+menu.insertBefore(el,menuItems[1])
