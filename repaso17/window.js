@@ -45,4 +45,6 @@
 /**
  * 
  * Métodos para moverse en el historial
+ *  .forward() ->lleva adelante
+ * .go(n) -> n positivo hacia adelante , n degativo hacia atras 
  */
