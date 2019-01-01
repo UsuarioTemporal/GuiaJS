@@ -113,3 +113,19 @@ menu.insertBefore(el,menuItems[1])
 
 let eleDele = menu.removeChild(menuItems[0])
 menu.appendChild(eleDele)
+
+menu.addEventListener('click',e =>{
+  console.log(e.target)
+  console.log(e)
+  e.preventDefault(); // evita el comportamiento predeterminado
+  e.target.style.color = 'red'
+})
+
+
+// Delegacion de eventos
+menu.addEventListener('click',e=>{
+  e.preventDefault()
+  if(e.target.tagName==='A'){
+    console.log(e.target.textContent)
+  }
+})
