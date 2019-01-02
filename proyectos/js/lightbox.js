@@ -16,19 +16,31 @@ const openLightBoxEvent = (container,gallery,large,description)=>{
         }
     })
 }
+
+const closeModal = modalElement =>{
+    let closeModal = modalElement.querySelector('.close-modal')
+    closeModal.addEventListener(e=>{
+        e.preventDefault()
+        document.body.removeChild(modalElement)
+    })
+}
+
 const openLightBox = (gallery,index,larges,description)=>{
     let lightboxElement = document.createElement('div')
     lightboxElement.innerHTML = `
         <div class="lightbox-overlay">
             <figure class="lightbox-container">
+                <div class="close-modal">X</div>
                 <img src="${larges[index]}" class="lightbox-image">
                 <figcaption>
                     <p class="lightbox-description">${description[index]}</p>
                     <nav class ="lightbox-navigator">
                         <a href="#" class="lightbox-navigation__button prev">
+                        ◀
                         </a>
                         <span class="lightbox-navigation__counter">Imagen ${index+1} de ${gallery.length}</span>
                         <a href="#" class="lightbox-navigation__button next">
+                        ▶
                         </a>
                     </nav>
                 </figcaption>
@@ -37,6 +49,8 @@ const openLightBox = (gallery,index,larges,description)=>{
     `
     lightboxElement.id = 'lightbox'
     document.body.appendChild(lightboxElement)
+
+    closeModal(lightboxElement)
 }
 const lightbox = container =>{
     let images = getImages(container),
@@ -44,3 +58,4 @@ const lightbox = container =>{
     description = getDescription(images)
     openLightBoxEvent(container,images,larges,description)
 }
+lightbox(document.getElementById('gallery-container'))
