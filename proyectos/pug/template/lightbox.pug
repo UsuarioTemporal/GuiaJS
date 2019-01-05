@@ -3,8 +3,8 @@ block main
     h1 LightBox gallery
     .gallery-container#gallery-container
         - let n = 1
-        while n<=12
+        while n<=4
             .gallery-item
-                img(src="img/gallery-"+n+"-thumb.jpg", alt="Descripcion de la imagen "+n, srcset="")
+                img(src="../../img/gallery-"+n+"-thumb.jpg", alt="Descripcion de la imagen "+n, srcset="")
             - n++ 
-    script(src="js/lightbox.js")
+    script(src="../../js/lightbox.js")
