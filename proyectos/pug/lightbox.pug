@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+    body
+        h1 LightBox gallery
+        .gallery-container#gallery-container
+            - let n = 1
+            while n<=4
+                .gallery-item
+                    img(src="img/gallery-"+n+"-thumb.jpg", alt="Descripcion de la imagen "+n, srcset="")
+                - n++ 
+        script(src="../js/lightbox.js")
