@@ -15,5 +15,9 @@ const postCSSPlugins = [
             add : true
         }
     })
-
 ]
+
+gulp.task('es6',()=>
+    gulp.src('./dev/js/*.js')
+    .pipe(babel( ))
+)
