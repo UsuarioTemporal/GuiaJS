@@ -18,13 +18,19 @@ const openLightBoxEvent = (container,gallery,large,description)=>{
 }
 
 const closeModalFunction = modalElement =>{
-    let closeModal = modalElement.querySelector('.close-modal');
+    let closeModal = modalElement.querySelector('.close-modal')
     closeModal.addEventListener('click',(e)=>{
         e.preventDefault()
         document.body.removeChild(modalElement)
-    });
+    })
 }
-
+const navigateLightbox=(lightboxElement,larges,description,index)=>{
+    let prevButton = lightboxElement.querySelector('.prev')
+    let nextButton = lightboxElement.querySelector('.next')
+    lightboxElement.addEventListener('click',e=>{
+        e.preventDefault()
+    })
+}
 const openLightBox = (gallery,index,larges,description)=>{
     let lightboxElement = document.createElement('div')
     lightboxElement.innerHTML = `
@@ -51,6 +57,7 @@ const openLightBox = (gallery,index,larges,description)=>{
     document.body.appendChild(lightboxElement)
 
     closeModalFunction(lightboxElement)
+    navigateLightbox(lightboxElement,larges,description,index)
 }
 const lightbox = container =>{
     let images = getImages(container),
