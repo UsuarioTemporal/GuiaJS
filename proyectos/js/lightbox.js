@@ -24,11 +24,23 @@ const closeModalFunction = modalElement =>{
         document.body.removeChild(modalElement)
     })
 }
-const navigateLightbox=(lightboxElement,larges,description,index)=>{
-    let prevButton = lightboxElement.querySelector('.prev')
-    let nextButton = lightboxElement.querySelector('.next')
+const navigateLightbox=(lightboxElement,larges,descriptions,index)=>{
+    let prevButton = lightboxElement.querySelector('.prev'),
+        nextButton = lightboxElement.querySelector('.next'),
+        image = lightboxElement.querySelector('img'),
+        description = lightboxElement.querySelector('p'),
+        counter = lightboxElement.querySelector('span')
     lightboxElement.addEventListener('click',e=>{
         e.preventDefault()
+        let target = e.target 
+        if (target===prevButton){
+           index= index===0 ? larges.length-1 : index-1
+            image.src= larges[index]
+        }else if(target==nextButton){
+            index= index===larges.length-1 ? 0 : index+1
+            image.src =larges[index]
+
+        }
     })
 }
 const openLightBox = (gallery,index,larges,description)=>{
