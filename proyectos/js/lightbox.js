@@ -34,13 +34,13 @@ const navigateLightbox=(lightboxElement,larges,descriptions,index)=>{
         e.preventDefault()
         let target = e.target 
         if (target===prevButton){
-           index= index===0 ? larges.length-1 : index-1
-            image.src= larges[index]
+            index= index===0 ? larges.length-1 : index-1
         }else if(target==nextButton){
             index= index===larges.length-1 ? 0 : index+1
-            image.src =larges[index]
-
         }
+        description.textContent=descriptions[index]
+        // counter.textContent = 
+        image.src =larges[index]
     })
 }
 const openLightBox = (gallery,index,larges,description)=>{
