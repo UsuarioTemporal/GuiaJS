@@ -39,7 +39,7 @@ const navigateLightbox=(lightboxElement,larges,descriptions,index)=>{
             index= index===larges.length-1 ? 0 : index+1
         }
         description.textContent=descriptions[index]
-        // counter.textContent = 
+        counter.textContent = `Imagen ${index+1} de ${descriptions.length}`
         image.src =larges[index]
     })
 }
