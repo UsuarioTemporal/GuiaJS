@@ -39,5 +39,33 @@ h1 {
 
 .lightbox-container {
   margin: auto;
+  position: relative;
   background: #fff;
   padding: 2em; }
+
+.close-modal {
+  background: tomato;
+  color: #fff;
+  position: absolute;
+  width: 1.8em;
+  height: 1.8em;
+  text-align: center;
+  line-height: 1.8em;
+  top: -0.9em;
+  right: -0.9em;
+  cursor: pointer;
+  border-radius: 50%; }
+
+.lightbox-navigator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  cursor: pointer;
+  opacity: 10%; }
+
+.lightbox-description {
+  text-align: center;
+  font-size: 1.1em; }

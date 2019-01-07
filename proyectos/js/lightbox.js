@@ -29,7 +29,15 @@ const navigateLightbox=(lightboxElement,larges,descriptions,index)=>{
         nextButton = lightboxElement.querySelector('.next'),
         image = lightboxElement.querySelector('img'),
         description = lightboxElement.querySelector('p'),
-        counter = lightboxElement.querySelector('span')
+        counter = lightboxElement.querySelector('span'),
+        closeButton = lightboxElement.querySelector('.close-modal')
+
+    window.addEventListener('keyup',e=>{
+        if(e.key==='ArrowRight') nextButton.click()
+        if(e.key==='ArrowLeft') prevButton.click()
+        if(e.key==='Escape') closeButton.click()
+    })
+    
     lightboxElement.addEventListener('click',e=>{
         e.preventDefault()
         let target = e.target 

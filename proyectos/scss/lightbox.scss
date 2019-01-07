@@ -24,6 +24,33 @@
 }
 .lightbox-container{
     margin: auto;
+    position: relative;
     background: #fff;
     padding: 2em;
+}
+
+.close-modal{
+    $size : 1.8em;
+    background: tomato;
+    color:#fff;
+    position: absolute;
+    width: $size;
+    height: $size;
+    text-align: center;
+    line-height: $size;
+    top : -$size/2;
+    right: -$size/2;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.lightbox-navigator{
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    opacity: 10%;
+}
+.lightbox-description{
+    text-align: center;
+    font-size: 1.1em;
 }
