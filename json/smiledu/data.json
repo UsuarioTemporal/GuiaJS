@@ -53,7 +53,7 @@
             "nombre_usuario": "",
             "edad": 0,
             "distrito": "Miraflores",
-            "hobbies": ["voley"]
+            "hobbies": ["voley","ajedres"]
         },
         { 
             "nombre" : "fatima", 
