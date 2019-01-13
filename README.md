@@ -81,3 +81,4 @@ Falsy : 0,String vacio,undefined,null,NaN
 [Algunas referencias](https://dorey.github.io/JavaScript-Equality-Table/)<br>
 Type coercion es el proceso que usa el interprete para poder convertir datos y poder obtener un resultado(como de `string` a `number`) ya sea de un tipo primitivo a objeto
 
+
