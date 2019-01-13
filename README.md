@@ -76,3 +76,4 @@ Falsy : 0,String vacio,undefined,null,NaN
 
 ## TYPE COERTION
 
+![Imagen Type](https://i.redd.it/4skcofasa1p01.png)
