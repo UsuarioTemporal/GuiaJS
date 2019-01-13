@@ -75,3 +75,4 @@ Falsy : 0,String vacio,undefined,null,NaN
 
 
 ## TYPE COERTION
+
