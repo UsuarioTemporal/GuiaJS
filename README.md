@@ -122,4 +122,43 @@ Output :
     >>> '3'
 ```
 
-Okay aquí vienen los problemas , por que al sumar una variable de tipo number con una varible de 
+Okay aquí vienen los problemas , por que al sumar una variable de tipo number con un array da `false` y al sumar da `'5'` en string, aquí viene la explicación , analicemos : 
+```javascript
+    let array = []
+    console.log([]==false)
+    console.log(''==false)
+    console.log(''==[])
+``` 
+```javascript
+    >>> true
+    >>> true
+    >>> true
+```
+Entonces como vemos el array vacio se comporta como un string , entonces al operar con un numero lo transformara temporalmente a un string
+
+Cabe recalcar los valores Truthy and falsy values que son que valores toman valores verdadedos o valores falsos , entonces cuando se quiere comprar esto  `''==' '` dara falso ya que como los dos son tipos string por lo que el interprete no tendra la necesidad de convertir sino que igualara y al notar que un string vacio es `false` y un string con contenido es `true` es mas que obvio que retornara un `false`
+
+Entonces al igualar u operar un array vacio con un numero es lo mismo que el primer ejemplo, cambiando algunas caracteristicas que tu mismo te daras cuenta :) .
+
+### **Atención** : 
+Como ya comprobamos un array vacio se comportara como un string vacio por lo que tu valor sera `false`(Falsy value) 
+
+```javascript
+    //Prueba
+    console.log([]==false)
+
+
+    //otra prueba
+    if([]) console.log('Soy verdadero')
+
+```
+
+Output :
+```javascript
+    >>> true
+    >>> 'Soy verdadero'
+```
+¿Pero que?, Como sabemos el array es falso , pero en la condicional actua como verdadero y esto es por el type coercion ,es decir el array se convierte en falsy value e intenta igualar al falsy value por lo que dara verdadero .
+
+### Sugerencias 
+Usar `===` y `!==` 
