@@ -103,3 +103,23 @@ Output :
     >>> true
 ```
 
+¿Por que pasa esto ? , por lo mismo que el anterior , al no poder igualar una variable de tipo number al string , lo que hace es convertir temporalmente la varible de tipo number a string entonces estaria evaluento esto 
+```javascript
+    >>> '5' == '5'
+```
+
+Otros ejemplos
+
+```javascript
+    let number = 3
+    let array = []
+    console.log(number==array)
+    console.log(number+array)
+```
+Output :
+```javascript
+    >>> false
+    >>> '3'
+```
+
+Okay aquí vienen los problemas , por que al sumar una variable de tipo number con una varible de 
