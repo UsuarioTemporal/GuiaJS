@@ -82,3 +82,24 @@ Falsy : 0,String vacio,undefined,null,NaN
 Type coercion es el proceso que usa el interprete para poder convertir datos y poder obtener un resultado(como de `string` a `number`) ya sea de un tipo primitivo a objeto
 
 
+```javascript
+    let number = 5
+    let string = '5'
+    console.log(number+string)
+```
+Output :
+```javascript
+    >>> '55'
+```
+ Esto sucede ya que javascript fuerza a la variable number a convertise temporalmente en string para poder obtener un resultado de la operacion en este caso seria la concatenacion
+
+ ```javascript
+    // usando las variables anteriores
+    let res = number == string
+    console.log(res)
+ ```
+Output :
+```javascript
+    >>> true
+```
+
