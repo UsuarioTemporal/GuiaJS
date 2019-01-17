@@ -169,16 +169,16 @@ Usar `===` y `!==`
 ## **Programación asíncrona**
 ```javascript
     const funcion = (value,callback)=>{
-        console.log('Valor',value)
+        console.log('Valor',value)//3
         setTimeout(()=>{
-            callback(value,Math.pow(value,2))
-        },0|Math.random()*100)
-    }
+            callback(value,Math.pow(value,2))//6
+        },0|Math.random()*100)//4
+    } // 1
 
     funcion(2,(value,resultado)=>{
-        console.log('Valor ',value,' resultado ',resultado)
-    })
-    console.log('Terminado ? ')
+        console.log('Valor ',value,' resultado ',resultado)//7
+    }) // 2
+    console.log('Terminado ? ')//5
 ```
 
 Output :
