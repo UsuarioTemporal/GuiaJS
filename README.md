@@ -166,14 +166,39 @@ Usar `===` y `!==`
 
 [Mas referencias](https://www.youtube.com/watch?v=j9xuvChJftg)
 
-## **Lenguaje asincrónico**
+## **Programación asíncrona**
+```javascript
+    const funcion = (value,callback)=>{
+        console.log('Valor',value)
+        setTimeout(()=>{
+            callback(value,Math.pow(value,2))
+        },0|Math.random()*100)
+    }
+
+    funcion(2,(value,resultado)=>{
+        console.log('Valor ',value,' resultado ',resultado)
+    })
+    console.log('Terminado ? ')
+```
+
+
+## **JS como lenguaje asincrónico**
 Este concepto quizá nos venga ala mente cuando tomamos el tema de apis con ajax o fetch que hacen peticiones asincrónicas 
 ```javascript
-    const peticion = (URL)=>{
+    const peticionAJAX = (URL)=>{
         const xhttp = new XMLHttpResquest()
         xhttp.open('GET',URL,true) // el true significará que la petición se realizará de manera asíncrona
     }
+    const peticionFETCH = (URL)=>{
+        fetch(URL).
+        then(response=>response.json()).
+        catch(_ =>{
+            console.log('Error')
+        })
+    }
 ```
+Se dice asincrono por que el código que obtendra solo se resolverá si es qyue el resquest HTTP sea resuelto , independiente que sea exitoso o no 
+
 
 ## **Hilos** 
 Hay que aclarar que javascript no maneja el paradigma multihilo, el browser dedica un único hilo de ejecución a cada página , y no es posible crear hilos en una ejecución de javascript
