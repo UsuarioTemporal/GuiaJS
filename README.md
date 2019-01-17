@@ -167,6 +167,8 @@ Usar `===` y `!==`
 [Mas referencias](https://www.youtube.com/watch?v=j9xuvChJftg)
 
 ## **Programación asíncrona**
+Los lenguajes de programacion asincronos se basan en llamadas que puedan ser cumnplidas ahora o en un futuro.Es decir , las variables pueden ser llenadas o asignadas en cualquier momento de la ejecucion del programa.
+En conclusion la programacion asincrona establece la posibilidad de hacer que algunas operaciones devuelvan el control al programa llamante antes de que hayan terminado mientras siguen operando en segundo plano.Esto agiliza el proceso de ejecucion y en general permite aumentar la escalibilidad, pero complica el razonamiento sobre el programa.
 ```javascript
     const funcion = (value,callback)=>{
         console.log('Valor',value)//3
