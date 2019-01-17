@@ -181,6 +181,12 @@ Usar `===` y `!==`
     console.log('Terminado ? ')
 ```
 
+Output :
+```javascript
+    >>> Valor 2
+    >>> Terminado ?
+    >>> Valor 2 resultado 4
+```
 
 ## **JS como lenguaje asincrónico**
 Este concepto quizá nos venga ala mente cuando tomamos el tema de apis con ajax o fetch que hacen peticiones asincrónicas 
