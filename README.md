@@ -171,16 +171,42 @@ Los lenguajes de programacion asincronos se basan en llamadas que puedan ser cum
 En conclusion la programacion asincrona establece la posibilidad de hacer que algunas operaciones devuelvan el control al programa llamante antes de que hayan terminado mientras siguen operando en segundo plano.Esto agiliza el proceso de ejecucion y en general permite aumentar la escalibilidad, pero complica el razonamiento sobre el programa.
 
 
+
 ## **Modelos de programacion asincronica**
-Para dar respuesta al probelma anterior, se han establecido diferentes modelos de progrmacion asincrona.Lo que permitiran estos modelos es aproximar ala programacion asincronica a programacion secuencial.
+Para dar respuesta al probelma anterior, se han establecido diferentes modelos de progrmacion asincrona .Lo que permitiran estos modelos es aproximar ala programacion asincronica a programacion secuencial.
 
 - **Modelo de paso de continuadores :** <br>
     Es el modelo de asincronia más utilizado dentro de NodeJS,cada funcion recibe informacion acerca de como debe tratar el resultado (de exito o error) de cada operacion.
 - **Modelo de eventos :** <br>
     Se utiliza una arquitectura dirigida por eventos que permiten a las operaciones no bloqueadas informar de su terminacion mediante señales de exito o fracaso.Requiere correlacion para sincronizar
 - **Modelo de promesas :** <br>
-    Se razona con los valores de retorno de las operaciones no bloqueantes de manera independiente
+    Se razona con los valores de retorno de las operaciones no bloqueantes de manera independiente del momento del tiempo en que dichos valores 
+    ```javascript
+    // Promesas
+    
+    const get = url => {
+        return new Promise((resolve, reject) => {
+            var xhr = new XMLHttpRequest();
+            xhr.addEventListener('load', _ => {
+            if (xhr.status !== 200) {
+                reject(new Error(xhr.statusText));
+            }
+            resolve(xhr.response);
+            });
+            
+            xhr.open('GET', url);
+            xhr.send();
+        }
+    }
 
+    get('story.json').then(response => {
+        console.log("Success!", response);
+    }).catch(error => {
+        console.error("Failed!", error);
+    });
+    ```
+- **Modelo de generadores :**<br>
+    Se utilizan generadores para devolver temporalmente el control al programa llamante y retorna en un momento del tiempo en que dichos valores (de exito o fallo) se obtengan.
 #### **Ventajas**
 Aumenta el throghput(eficiencia)
 ### **Desventajas**
@@ -199,6 +225,7 @@ Dificil entendimiento, aunque el principal problema de esto es cómo dar continu
         console.log('Valor ',value,' resultado ',resultado)//7
     }) // 2
     console.log('Terminado ? ')//5
+    
 ```
 
 Output :
