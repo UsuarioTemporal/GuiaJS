@@ -7,5 +7,17 @@
     font-family: sans-serif;
 }
 body{
+    min-height: 100vh;
     background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    text-align: center;
+    color:wheat;
+}
+h1{
+    padding-bottom: 1em;
 }
