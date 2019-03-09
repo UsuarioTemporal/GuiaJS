@@ -1,8 +1,21 @@
-import {getRandomCoords} from './helpers.js'
+import {getRandomCoords,getdistance,information} from './helpers.js'
+
+const WIDTH = 400
+const HEIGHT = 400
+
+let target = {
+    x:getRandomCoords(WIDTH),
+    y:getRandomCoords(HEIGHT)
+}
 const map = document.getElementById('map')
-console.log(getRandomCoords(5));
+const info = document.getElementById('distancia')
 map.addEventListener('click',e=>{
     e.preventDefault()
-    console.log(e.offsetX);
-    console.log(e.offsetY);
+
+    let distance = getdistance(e,target)
+    info.innerHTML = `${information(distance)}`
+    if(distance<=10){
+        alert('encontrado')
+        return location.reload()
+    }
 })
