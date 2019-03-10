@@ -261,4 +261,8 @@ Hay que aclarar que javascript no maneja el paradigma multihilo, el browser dedi
 
 ![bundle](https://www.arquitecturajava.com/wp-content/uploads/JavaScriptBundleBrowserifyDiagram.png)
 
+```javascript
+    // Un bundle sirve para agrupar todos los ficheros de JavaScript en uno solo. Así el navegador no necesita hacer varias peticiones HTTP. Vamos a  instalar browserify usando npm.
+```
+
 [bundle](https://www.arquitecturajava.com/que-es-un-javascript-bundle/)
