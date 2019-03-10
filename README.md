@@ -141,7 +141,25 @@ Cabe recalcar los valores Truthy and falsy values que son que valores toman valo
 Entonces al igualar u operar un array vacio con un numero es lo mismo que el primer ejemplo, cambiando algunas caracteristicas que tu mismo te daras cuenta :) .
 
 ### **Atención** : 
-Como ya comprobamos un array vacio se comportara como un string vacio por lo que tu valor sera `false`(Falsy value) 
+Como ya comprobamos un array vacio se comportara como un string vacio por lo que tu valor sera `false`(Falsy value), esto podria ser cierto bajo este contexto (es decir al comprobarlo con un string) pero que pasaria si comprobamos esto
+
+```javascript
+    if([]) console.log('estoy vacio')
+    if('') console.log('estoy vacio')
+```
+
+```javascript
+    >>> 'estoy vacio'
+    >>> undefined
+```
+
+Pero que carajos ? , dije que un [] vacio retorna un false y un '' vacio igual , que esta pasando satanas?.
+
+Lo que paso es que javascript intenta hacer compatible e intenta igualas los tipos de datos para poder trabajar a esto se le llama o como ya vemos en el subititulo `type coertion` , por ende esto lleva a una maldita y sucia conclusión :(se puede contagiar) el virus se comporta dependiendo del huesped , es decir que la convercion de tipos actua dependiendo del contexto de donde se este trabajando.
+
+```javascript
+    >>> // Aclaración hecha por Christian Sotomayor
+```
 
 ```javascript
     //Prueba
