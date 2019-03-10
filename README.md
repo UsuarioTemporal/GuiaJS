@@ -250,8 +250,15 @@ Este concepto quizá nos venga ala mente cuando tomamos el tema de apis con ajax
         })
     }
 ```
-Se dice asincrono por que el código que obtendra solo se resolverá si es qyue el resquest HTTP sea resuelto , independiente que sea exitoso o no 
 
+Se dice asincrono por que el código que obtendra solo se resolverá si es qyue el resquest HTTP sea resuelto , independiente que sea exitoso o no
 
-## **Hilos** 
+## **Hilos**
+
 Hay que aclarar que javascript no maneja el paradigma multihilo, el browser dedica un único hilo de ejecución a cada página , y no es posible crear hilos en una ejecución de javascript
+
+## **Bundle**
+
+![bundle](https://www.arquitecturajava.com/wp-content/uploads/JavaScriptBundleBrowserifyDiagram.png)
+
+[bundle](https://www.arquitecturajava.com/que-es-un-javascript-bundle/)
