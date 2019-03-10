@@ -155,7 +155,7 @@ Como ya comprobamos un array vacio se comportara como un string vacio por lo que
 
 Pero que carajos ? , dije que un [] vacio retorna un false y un '' vacio igual , que esta pasando satanas?.
 
-Lo que paso es que javascript intenta hacer compatible e intenta igualas los tipos de datos para poder trabajar a esto se le llama o como ya vemos en el subititulo `type coertion` , por ende esto lleva a una maldita y sucia conclusión :(se puede contagiar) el virus se comporta dependiendo del huesped , es decir que la convercion de tipos actua dependiendo del contexto de donde se este trabajando.
+Lo que paso es que javascript intenta hacer compatible e intenta igualar los tipos de datos para poder trabajar a esto se le llama o como ya vemos en el subtitulo `type coertion` , por ende esto lleva a una maldita y sucia conclusión :(se puede contagiar) el virus se comporta dependiendo del huesped , es decir que la convercion de tipos actua dependiendo del contexto de donde se este trabajando.
 
 ```javascript
     >>> // Aclaración hecha por Christian Sotomayor
