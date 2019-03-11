@@ -1,3 +1,4 @@
+import './styles.css'
 import Photos from './photos'
 const alert_ = (text)=>{
     alert(text)

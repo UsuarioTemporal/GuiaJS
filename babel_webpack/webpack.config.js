@@ -20,15 +20,16 @@ module.exports = {
             {
                 test:/\.css$/,
                 use:[
-                    'css-loader',
-                    'style-loader'
+                    MiniCssExtractPlugin.loader,
+                    'css-loader'
+                    // 'style-loader'
                 ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: __dirname+'src/index.html',
+            template: __dirname+'/src/index.html',
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
@@ -39,7 +40,7 @@ module.exports = {
             }
         }),
         new MiniCssExtractPlugin({
-
+            filename:'css/app.bundle.css'
         })
     ]
 }
