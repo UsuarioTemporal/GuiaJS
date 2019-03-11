@@ -3,6 +3,7 @@
 // https://github.com/jantimon/html-webpack-plugin
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
     entry: { // donde estara nuestra carpeta de desarrollo
         app: `${__dirname}/src/app/index.js`
@@ -17,13 +18,17 @@ module.exports = {
     module:{ // para establecer reglas de determinados archivos
         rules:[
             {
-                test:/\.css$/
+                test:/\.css$/,
+                use:[
+                    'css-loader',
+                    'style-loader'
+                ]
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: `${__dirname}/src/index.html`,
+            template: __dirname+'src/index.html',
             minify: {
                 collapseWhitespace: true,
                 removeComments: true,
@@ -32,6 +37,9 @@ module.exports = {
                 removeStyleLinkTypeAttributes: true,
                 useShortDoctype: true
             }
+        }),
+        new MiniCssExtractPlugin({
+
         })
     ]
 }
