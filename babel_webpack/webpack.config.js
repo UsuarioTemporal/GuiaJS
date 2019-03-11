@@ -1,4 +1,5 @@
 // npx webpack -p produccion | -d desarrollo
+// npx webpack-dev-server // esto es para desarrollo y para produccion tendriamos que convertir el codigo moderno a estandar
 // https://github.com/jantimon/html-webpack-plugin
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
@@ -9,6 +10,9 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'js/app.bundle.js'
+    },
+    devServer:{
+        port:8080
     },
     plugins: [
         new HtmlWebpackPlugin({
