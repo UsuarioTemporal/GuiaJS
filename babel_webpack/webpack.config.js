@@ -14,6 +14,13 @@ module.exports = {
     devServer:{
         port:8080
     },
+    module:{ // para establecer reglas de determinados archivos
+        rules:[
+            {
+                test:/\.css$/
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: `${__dirname}/src/index.html`,
