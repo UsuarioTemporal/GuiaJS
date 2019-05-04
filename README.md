@@ -254,7 +254,9 @@ Output :
 ```
 
 ## **JS como lenguaje asincrónico**
-Este concepto quizá nos venga ala mente cuando tomamos el tema de apis con ajax o fetch que hacen peticiones asincrónicas 
+
+Este concepto quizá nos venga ala mente cuando tomamos el tema de apis con ajax o fetch que hacen peticiones asincrónicas
+
 ```javascript
     const peticionAJAX = (URL)=>{
         const xhttp = new XMLHttpResquest()
@@ -280,7 +282,22 @@ Hay que aclarar que javascript no maneja el paradigma multihilo, el browser dedi
 ![bundle](https://www.arquitecturajava.com/wp-content/uploads/JavaScriptBundleBrowserifyDiagram.png)
 
 ```javascript
-    // Un bundle sirve para agrupar todos los ficheros de JavaScript en uno solo. Así el navegador no necesita hacer varias peticiones HTTP. Vamos a  instalar browserify usando npm.
+    // Un bundle sirve para agrupar todos los ficheros de JavaScript en uno solo. Así el navegador no necesita hacer varias peticiones HTTP.
 ```
 
 [bundle](https://www.arquitecturajava.com/que-es-un-javascript-bundle/)
+
+## **Data inmutability**
+
+```javascript
+// Todos lo datos primitivos son inmutables
+// Se trabajará con estructuras de datos inmutables
+```
+
+>*Immutability: The true constant is change. Mutation hides change. <br>Hidden change manifests chaos. Therefore, the wise embrace history.*
+
+> *Si tú tienes un dólar y te doy otro dólar, no cambia el hecho de que<br> hace un momento solo tenías un dólar y ahora tienes dos.<br>La mutabilidad intenta borrar la historia, pero la historia no se puede borrar.*
+
+
+- Fuentes:
+    - [Inmutabilidad](https://yeisondaza.com/immutabilidad-en-javascript)
