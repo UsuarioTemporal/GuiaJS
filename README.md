@@ -282,7 +282,8 @@ Hay que aclarar que javascript no maneja el paradigma multihilo, el browser dedi
 ![bundle](https://www.arquitecturajava.com/wp-content/uploads/JavaScriptBundleBrowserifyDiagram.png)
 
 ```javascript
-    // Un bundle sirve para agrupar todos los ficheros de JavaScript en uno solo. Así el navegador no necesita hacer varias peticiones HTTP.
+    // Un bundle sirve para agrupar todos los ficheros de JavaScript en
+    // uno solo. Así el navegador no necesita hacer varias peticiones HTTP.
 ```
 
 [bundle](https://www.arquitecturajava.com/que-es-un-javascript-bundle/)
@@ -290,8 +291,9 @@ Hay que aclarar que javascript no maneja el paradigma multihilo, el browser dedi
 ## **Data inmutability**
 
 ```javascript
-// Todos lo datos primitivos son inmutables
-// Se trabajará con estructuras de datos inmutables
+    // Todos lo datos primitivos son inmutables
+
+/   / Se trabajará con estructuras de datos inmutables
 ```
 
 >*Immutability: The true constant is change. Mutation hides change. <br>Hidden change manifests chaos. Therefore, the wise embrace history.*
