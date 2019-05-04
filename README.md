@@ -292,8 +292,7 @@ Hay que aclarar que javascript no maneja el paradigma multihilo, el browser dedi
 
 ```javascript
     // Todos lo datos primitivos son inmutables
-
-/   / Se trabajará con estructuras de datos inmutables
+    // Se trabajará con estructuras de datos inmutables
 ```
 
 >*Immutability: The true constant is change. Mutation hides change. <br>Hidden change manifests chaos. Therefore, the wise embrace history.*
