@@ -351,4 +351,41 @@ Son funciones intenas que tienen la capacidad de acceder a variables y parametro
 
 ## **Funciones de alto orden**
 
+## **Funciones puras**
+
+Función impura :
+
+```javascript
+    //Currying
+    const fn = (sum=0) => cantidad=>{
+        suma += cantidad
+        return sum
+    }
+    const sumadorA = fn()
+
+    sumadorA(2) // retorna 2
+    sumadorA(2) // retorna 4
+    sumadorA(2) // retorna 6
+
+    /**
+    * Cuando llamamos dos veces ala misma función con el mismo parametro
+    * y nos retorna un resultado diferente , esto es debido a que la función
+    * cuenta con un estado e identodad
+    * */
+```
+
+Función pura:
+
+```javascript
+    // Dada las mismas entradas, debe retornas el mismo resultado, sin
+    // importar cuantas veces se llame
+
+    const fn = (suma=0)=>cantidad=> suma+camtidad
+    const sumadorA = fn()
+
+    sumadorA(2) // retorna 2
+    sumadorA(2) // retorna 2
+    sumadorA(2) // retorna 2
+```
+
 [Fuente](https://yeisondaza.com/funciones-puras-en-javascript-crea-funciones-libres)
