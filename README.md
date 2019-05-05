@@ -299,6 +299,20 @@ Hay que aclarar que javascript no maneja el paradigma multihilo, el browser dedi
 
 > *Si tú tienes un dólar y te doy otro dólar, no cambia el hecho de que<br> hace un momento solo tenías un dólar y ahora tienes dos.<br>La mutabilidad intenta borrar la historia, pero la historia no se puede borrar.*
 
+Los objetos en javascript son mutables
+
+```javascript
+    let ob_1 = {
+        a:2,
+        b:4
+    }
+    let ob_2 = ob_1
+```
+
+> *La inmutabilidad hace nuestro código mucho más predecible, porque somos<br> más conscientes de dónde se producen los cambios de estado*
+
+> *La inmutabilidad simplifica mucho el tratamiento de al concurrencia*
 
 - Fuentes:
-    - [Inmutabilidad](https://yeisondaza.com/immutabilidad-en-javascript)
+    - [Inmutabilidad_1](https://yeisondaza.com/immutabilidad-en-javascript)
+    - [Inmutabilidad_2](https://www.genbeta.com/desarrollo/entendiendo-la-inmutabilidad-que-es-para-que-sirve-y-como-usarla)
