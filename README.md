@@ -343,4 +343,12 @@ El valor inmutable es un valor que no se puede cambiar luego de ser definido, se
 
 ## **Closures**
 
-Son funciones intenas que tienen la capacidad de acceder a variables y parametros externos aun cuando su funcion padre haya terminado de ejecutarse
+Son funciones intenas que tienen la capacidad de acceder a variables y parametros externos aun cuando su funcion padre haya terminado de ejecutarse.
+
+## **Currying**
+
+## **Herencia funcional**
+
+## **Funciones de alto orden**
+
+[Fuente](https://yeisondaza.com/funciones-puras-en-javascript-crea-funciones-libres)
