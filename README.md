@@ -1,20 +1,24 @@
 # RepasoJS
-Curso de JS para que chavex repase 
+
+Curso de JS para que chavex repase
+
 ## ECMA INTERNATIONAL (European Computer Manufectures Association)
+
 La industria encargada de la estandarización de js y otras tecnologias.
 
 [Mas referencias](https://es.wikipedia.org/wiki/Ecma_International)
 
-
 ## Tipos de datos
-Javascript es un lenguaje dinamicamente tipado o debilmente tipado , esto quiere decir que no se colocara el tipo de dato cuando se quiere definir una variable (Al igual que python :3)
 
+Javascript es un lenguaje dinamicamente tipado o debilmente tipado , esto quiere decir que no se colocara el tipo de dato cuando se quiere definir una variable (Al igual que python :3)
 
 Javascript esta basado en prototipos ,esto biene incluido en las variables ,metodos , funciones,objetos, etc .
 
 ### Prototipos
+
 Esto se puede encontrar mayormente en los objetos, esto quiere decir que todos los objetos dependen de un prototipo y que estos tambien son objetos .
 En conclusion un prototipo es un objeto del que otros objetos heredan propiedades
+
 - Objetos creados por `new Object()` heredan directamente dl objeto `Object.prototype`
 - Objetos creados por `new Date()` heredan de `Date.prototype`
 
@@ -22,7 +26,9 @@ En conclusion un prototipo es un objeto del que otros objetos heredan propiedade
     let texto = 'Que pex' 
     console.log(texto.length)
 ```
+
 > **resultado** =  7
+
 ```javascript
     //primitivos
     string (texto)
@@ -67,12 +73,12 @@ Antes de empezar hay que aclarar el scope de las varibles `var` y `let` , estos 
     }
     console.log(numero)
 ```
+
 ## Truthy and falsy values
 
 Truthy : String no vacios ,[],{},numeros diferentes de cero
 <br>
 Falsy : 0,String vacio,undefined,null,NaN
-
 
 ## TYPE COERCION
 
@@ -81,16 +87,18 @@ Falsy : 0,String vacio,undefined,null,NaN
 [Algunas referencias](https://dorey.github.io/JavaScript-Equality-Table/)<br>
 Type coercion es el proceso que usa el interprete para poder convertir datos y poder obtener un resultado(como de `string` a `number`) ya sea de un tipo primitivo a objeto
 
-
 ```javascript
     let number = 5
     let string = '5'
     console.log(number+string)
 ```
+
 Output :
+
 ```javascript
     >>> '55'
 ```
+
  Esto sucede ya que javascript fuerza a la variable number a convertise temporalmente en string para poder obtener un resultado de la operacion en este caso seria la concatenacion
 
  ```javascript
@@ -98,12 +106,15 @@ Output :
     let res = number == string
     console.log(res)
  ```
+
 Output :
+
 ```javascript
     >>> true
 ```
 
-¿Por que pasa esto ? , por lo mismo que el anterior , al no poder igualar una variable de tipo number al string , lo que hace es convertir temporalmente la varible de tipo number a string entonces estaria evaluento esto 
+¿Por que pasa esto ? , por lo mismo que el anterior , al no poder igualar una variable de tipo number al string , lo que hace es convertir temporalmente la varible de tipo number a string entonces estaria evaluento esto
+
 ```javascript
     >>> '5' == '5'
 ```
@@ -116,31 +127,37 @@ Otros ejemplos
     console.log(number==array)
     console.log(number+array)
 ```
+
 Output :
+
 ```javascript
     >>> false
     >>> '3'
 ```
 
-Okay aquí vienen los problemas , por que al sumar una variable de tipo number con un array da `false` y al sumar da `'5'` en string, aquí viene la explicación , analicemos : 
+Okay aquí vienen los problemas , por que al sumar una variable de tipo number con un array da `false` y al sumar da `'5'` en string, aquí viene la explicación , analicemos :
+
 ```javascript
     let array = []
     console.log([]==false)
     console.log(''==false)
     console.log(''==[])
-``` 
+```
+
 ```javascript
     >>> true
     >>> true
     >>> true
 ```
+
 Entonces como vemos el array vacio se comporta como un string , entonces al operar con un numero lo transformara temporalmente a un string
 
 Cabe recalcar los valores Truthy and falsy values que son que valores toman valores verdadedos o valores falsos , entonces cuando se quiere comprar esto  `''==' '` dara falso ya que como los dos son tipos string por lo que el interprete no tendra la necesidad de convertir sino que igualara y al notar que un string vacio es `false` y un string con contenido es `true` es mas que obvio que retornara un `false`
 
 Entonces al igualar u operar un array vacio con un numero es lo mismo que el primer ejemplo, cambiando algunas caracteristicas que tu mismo te daras cuenta :) .
 
-### **Atención** : 
+### **Atención**
+
 Como ya comprobamos un array vacio se comportara como un string vacio por lo que tu valor sera `false`(Falsy value), esto podria ser cierto bajo este contexto (es decir al comprobarlo con un string) pero que pasaria si comprobamos esto
 
 ```javascript
@@ -172,25 +189,27 @@ Lo que paso es que javascript intenta hacer compatible e intenta igualar los tip
 ```
 
 Output :
+
 ```javascript
     >>> true
     >>> 'Soy verdadero'
 ```
+
 ¿Pero que?, Como sabemos el array es falso , pero en la condicional actua como verdadero y esto es por el type coercion ,es decir el array se convierte en falsy value e intenta igualar al falsy value por lo que dara verdadero .
 
 ### Sugerencias 
-Usar `===` y `!==` 
 
+Usar `===` y `!==` 
 
 [Mas referencias](https://www.youtube.com/watch?v=j9xuvChJftg)
 
 ## **Programación asíncrona**
+
 Los lenguajes de programacion asincronos se basan en llamadas que puedan ser cumnplidas ahora o en un futuro.Es decir , las variables pueden ser llenadas o asignadas en cualquier momento de la ejecucion del programa.
 En conclusion la programacion asincrona establece la posibilidad de hacer que algunas operaciones devuelvan el control al programa llamante antes de que hayan terminado mientras siguen operando en segundo plano.Esto agiliza el proceso de ejecucion y en general permite aumentar la escalibilidad, pero complica el razonamiento sobre el programa.
 
-
-
 ## **Modelos de programacion asincronica**
+
 Para dar respuesta al probelma anterior, se han establecido diferentes modelos de progrmacion asincrona .Lo que permitiran estos modelos es aproximar ala programacion asincronica a programacion secuencial.
 
 - **Modelo de paso de continuadores :** <br>
@@ -199,9 +218,9 @@ Para dar respuesta al probelma anterior, se han establecido diferentes modelos d
     Se utiliza una arquitectura dirigida por eventos que permiten a las operaciones no bloqueadas informar de su terminacion mediante señales de exito o fracaso.Requiere correlacion para sincronizar
 - **Modelo de promesas :** <br>
     Se razona con los valores de retorno de las operaciones no bloqueantes de manera independiente del momento del tiempo en que dichos valores 
-    ```javascript
+
+```javascript
     // Promesas
-    
     const get = url => {
         return new Promise((resolve, reject) => {
             var xhr = new XMLHttpRequest();
@@ -211,7 +230,6 @@ Para dar respuesta al probelma anterior, se han establecido diferentes modelos d
             }
             resolve(xhr.response);
             });
-            
             xhr.open('GET', url);
             xhr.send();
         }
@@ -223,6 +241,7 @@ Para dar respuesta al probelma anterior, se han establecido diferentes modelos d
         console.error("Failed!", error);
     });
     ```
+
 - **Modelo de generadores :**<br>
     Se utilizan generadores para devolver temporalmente el control al programa llamante y retorna en un momento del tiempo en que dichos valores (de exito o fallo) se obtengan.
 #### **Ventajas**
@@ -243,10 +262,11 @@ Dificil entendimiento, aunque el principal problema de esto es cómo dar continu
         console.log('Valor ',value,' resultado ',resultado)//7
     }) // 2
     console.log('Terminado ? ')//5
-    
+
 ```
 
 Output :
+
 ```javascript
     >>> Valor 2
     >>> Terminado ?
@@ -313,6 +333,14 @@ Los objetos en javascript son mutables
 
 > *La inmutabilidad simplifica mucho el tratamiento de al concurrencia*
 
+El valor inmutable es un valor que no se puede cambiar luego de ser definido, se puede modificar pero dever ser un objeto diferente
+
+>*Cuando creamos estructuras de datos nos preocupamos principalmente de dos cosas **como se almacenan los datos y que tan rápido puedo acceder a mis datos***
+
 - Fuentes:
     - [Inmutabilidad_1](https://yeisondaza.com/immutabilidad-en-javascript)
     - [Inmutabilidad_2](https://www.genbeta.com/desarrollo/entendiendo-la-inmutabilidad-que-es-para-que-sirve-y-como-usarla)
+
+## **Closures**
+
+Son funciones intenas que tienen la capacidad de acceder a variables y parametros externos aun cuando su funcion padre haya terminado de ejecutarse
