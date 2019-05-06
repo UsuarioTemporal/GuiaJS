@@ -386,20 +386,16 @@ Cada funcion debe resolver un solo problema y resolverlo bien. Principio DRY (Do
     const operation = (x,y) =>pro(sum(x,y))
 
     // tercer ejemplo
-    const funCaminar =nombre=>(
-        {
+    const funCaminar =nombre=>({
             caminar(){
                 console.log(`${nombre} esta caminando`);
             }
-        }
-    );
-    const funHablar= nombre=>(
-        {
+        });
+    const funHablar= nombre=>({
             hablar(){
                 console.log(`${nombre} esta hablando`);
             }
-        }
-    );
+        });
     const persona = nombre=>Object.assign({nombre},funHablar(nombre),funCaminar(nombre))
 
     let thom = persona('thom')
@@ -447,4 +443,11 @@ Función pura:
     // Recomendación : No debe depender de un estado externo . (No siempre se cumple)
 ```
 
+## **Propiedades internas**
+
+
 [Fuente](https://yeisondaza.com/funciones-puras-en-javascript-crea-funciones-libres)
+
+[Fuente](https://medium.com/entendiendo-javascript/propiedades-internas-en-javascript-717057026516)
+
+[VideoFuncional](https://www.youtube.com/watch?v=yIJ6buD8caU)
