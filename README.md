@@ -345,7 +345,21 @@ El valor inmutable es un valor que no se puede cambiar luego de ser definido, se
 
 Son funciones intenas que tienen la capacidad de acceder a variables y parametros externos aun cuando su funcion padre haya terminado de ejecutarse.
 
+```javascript
+    const memoization = ()=>{
+        let cache = {}
+        const wrapper = n =>{
+            if(n===1 || n===2) return n-1
+            if(!cache.hasOwnProperty(n)) cache[n]=wrapper(n-1)+wrapper(n-2)
+            return cache[n]
+        }
+        return wrapper;
+    }
+```
+
 ## **Currying**
+
+> *Es poder llamar a una función con menos parámetros de lo que espera,<br> esta devuelve una función que espera los parámetros restantes y retorna el resultado*
 
 ## **Herencia funcional**
 
@@ -386,6 +400,9 @@ Función pura:
     sumadorA(2) // retorna 2
     sumadorA(2) // retorna 2
     sumadorA(2) // retorna 2
+
+
+    // Recomendación : No debe depender de un estado externo . (No siempre se cumple)
 ```
 
 [Fuente](https://yeisondaza.com/funciones-puras-en-javascript-crea-funciones-libres)
