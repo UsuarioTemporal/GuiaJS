@@ -386,7 +386,25 @@ Cada funcion debe resolver un solo problema y resolverlo bien. Principio DRY (Do
     const operation = (x,y) =>pro(sum(x,y))
 
     // tercer ejemplo
+    const funCaminar =nombre=>(
+        {
+            caminar(){
+                console.log(`${nombre} esta caminando`);
+            }
+        }
+    );
+    const funHablar= nombre=>(
+        {
+            hablar(){
+                console.log(`${nombre} esta hablando`);
+            }
+        }
+    );
+    const persona = nombre=>Object.assign({nombre},funHablar(nombre),funCaminar(nombre))
 
+    let thom = persona('thom')
+    thom.caminar()
+    thom.hablar()
 ```
 
 ## **Funciones puras**
