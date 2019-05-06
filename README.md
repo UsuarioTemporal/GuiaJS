@@ -361,9 +361,33 @@ Son funciones intenas que tienen la capacidad de acceder a variables y parametro
 
 > *Es poder llamar a una función con menos parámetros de lo que espera,<br> esta devuelve una función que espera los parámetros restantes y retorna el resultado*
 
-## **Herencia funcional**
-
 ## **Funciones de alto orden**
+
+Este "**concepto**" lo tienen todos los lenguajes de programación funcional
+es básicamente tratar a las funciones como ciudadanos de primera clase, esto significa que las funciones son objetos (y python dice : entendí esa referencia jajaj)
+
+## **Composición**
+
+Es combinar varias funciones pequeñas para producir una nueva funcion.
+Cada funcion debe resolver un solo problema y resolverlo bien. Principio DRY (Don't Repeat Yourself)
+
+```javascript
+
+    // primer ejemplo
+    let text = 'Aprende a programar bien'
+    const split = str=>str.split(' ')
+    const count = arr=>arr.length
+    const countWords = str=>count(split(str))
+
+    //segundo ejemplo
+    let number = 5
+    const sum = (x,y)=>x+y
+    const pro = number =>number*10
+    const operation = (x,y) =>pro(sum(x,y))
+
+    // tercer ejemplo
+
+```
 
 ## **Funciones puras**
 
