@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif; }
+
+h1, h2 {
+  color: rgba(255, 255, 255, 0.7); }
+
+body {
+  background: #222; }
+
+.main-title {
+  margin: 1em auto;
+  text-align: center; }
+
+h2 {
+  font-size: 1.1em;
+  margin-top: 2em; }
+
+main {
+  width: 80%;
+  margin: auto; }
+
+.acordeon-container {
+  margin: auto; }
+  .acordeon-container h2 {
+    text-align: center;
+    margin-bottom: 2em; }
+
+.acordeon {
+  max-width: 600px;
+  margin: auto; }
+  .acordeon__title {
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    background: #ddd;
+    line-height: 2.5;
+    padding: 0 1em;
+    font-size: 1.2em;
+    color: rgba(255, 255, 255, 0.5);
+    background-color: #111;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    -webkit-box-shadow: 0 -1px 0 0 #000 inset;
+    box-shadow: 0 -1px 0 0 #000 inset;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden; }
+  .acordeon__content {
+    padding: 1em 1em 1.5em;
+    background: rgba(255, 255, 255, 0.5);
+    display: none;
+    -webkit-transition: all .35s;
+    -o-transition: all .35s;
+    transition: all .35s; }
+    .acordeon__content.active {
+      display: block; }

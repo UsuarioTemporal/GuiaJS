@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        title Document
+        link(rel="stylesheet", href="./css/style.css")
+    body
+        h1.main-title Acordeon
+        main
+            .acordeon-container
+                .acordeon#acordeon
+                    - for (let i=1;i<=4;i++)
+                        h3.acordeon__title=`título ${i}`
+                        p.acordeon__content Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates quibusdam nihil corporis perferendis asperiores expedita eligendi adipisci. Harum maxime ab, nulla fugiat vero, animi atque, voluptatem quis itaque tempora distinctio!
+        script(src="./js/script-dist.js")
