@@ -1,0 +1,35 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.tabs-container{
+    position: relative;
+    width: 500px;
+    margin: 1em auto;
+}
+.tabs{
+    list-style: none;
+    display: flex;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
+}
+.tabs__item{
+    border: 1px solid #ccc;
+    line-height: 2.5;
+    padding: 0 1em;
+    margin-right: 1px;
+    background: #eee;
+    border-radius: 5px 5px 0 0;
+}
+.tabs__item.active{
+    background: #fff;
+}
+.panels{
+    border: 1px solid #ccc;
+    padding: 1em;
+}
