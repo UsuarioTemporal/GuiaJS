@@ -14,22 +14,36 @@
 .tabs{
     list-style: none;
     display: flex;
-    position: relative;
-    top: 1px;
-    cursor: pointer;
+    
 }
 .tabs__item{
     border: 1px solid #ccc;
     line-height: 2.5;
+    border-bottom: none;
     padding: 0 1em;
     margin-right: 1px;
     background: #eee;
     border-radius: 5px 5px 0 0;
+    position: relative;
+    top: 1px;
+    cursor: pointer;
 }
 .tabs__item.active{
     background: #fff;
+    z-index: 20;
 }
 .panels{
     border: 1px solid #ccc;
     padding: 1em;
+    position: relative;
+    z-index: 10;
+    transition: all .3s;
+}
+.panels__item{
+    position: absolute;
+    left: -50000%;
+}
+.panels__item.active{
+    position: relative;
+    left: 0;
 }
