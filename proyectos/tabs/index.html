@@ -12,11 +12,11 @@
 <body>
     <div class="tabs-container">
         <ul class="tabs" id=tabs>
-            <li class="tabs__item active">Tab 1</li>
-            <li class="tabs__item">Tab 2</li>
-            <li class="tabs__item">Tab 3</li>
-            <li class="tabs__item">Tab 4</li>
-            <li class="tabs__item">Tab 5</li>
+            <li class="tabs__item active" id=tab-1>Tab 1</li>
+            <li class="tabs__item" id=tab-2>Tab 2</li>
+            <li class="tabs__item" id=tab-3>Tab 3</li>
+            <li class="tabs__item" id=tab-4>Tab 4</li>
+            <li class="tabs__item" id=tab-5>Tab 5</li>
         </ul>
         <div class="panels">
             <div class="panels__item active">
@@ -72,6 +72,15 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        ((doc)=>{
+            const destination = location.hash.slice(1)
+            if(!destination) return
+            const tab = document.getElementById(destination)
+            if(!tab) return
+            tab.click()
+        })(document);
+    </script>
 </body>
 
 </html>
